@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ThunderMovie.urls'
+ROOT_URLCONF = 'skychooser.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ThunderMovie.wsgi.application'
+WSGI_APPLICATION = 'skychooser.wsgi.application'
 
 
 # Database
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'ThunderMovie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'NAME': 'skychooser',
+        'USER': 'root',
+        'PASSWORD': 'skychooser',
+        'HOST': '120.92.62.81',
         'PORT': '3306',
     }
 }
