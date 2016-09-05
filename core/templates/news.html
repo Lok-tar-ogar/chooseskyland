@@ -1,0 +1,47 @@
+{% extends 'master.html' %}
+
+{% load poll_extras %}
+{% load staticfiles %}
+
+{% block title %}
+    择天大陆-新闻公告
+{% endblock %}
+{% block content %}
+    <div class="header04">
+        <div class="sidebar">
+            <div class="sidebar">
+                <div class="side_left_add"><a target="itunes_store"
+                                              href="#"
+                                              title=""><img width="268" height="82" src="http://static.kunlun.com/web/xb/image/app_store.png"></a>
+                </div>
+                <div class="side_left_add"><a
+                        href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"
+                        title=""><img width="268" height="82"
+                                      src="http://static.kunlun.com/web/xb/image/android_download.png"></a></div>
+                <div class="code w1">
+                    <div id="title01">
+                        <div class="codeTitle">
+                            <ul>
+                                <li>IOS</li>
+                                <li class="click_and" onclick="javascript:showTxt('title0','2','2');">ANDROID</li>
+                            </ul>
+                        </div>
+                        <div class="codeCont"><img width="113" height="113"
+                                                   src="http://static.kunlun.com/web/xb/image/code_ios.jpg"></div>
+                    </div>
+                    <div style="display:none;" id="title02">
+                        <div class="codeTitle">
+                            <ul>
+                                <li class="click_ios" onclick="javascript:showTxt('title0','1','2');">IOS</li>
+                                <li>ANDROID</li>
+                            </ul>
+                        </div>
+                        <div class="codeCont"><img width="113" height="113"
+                                                   src="http://static.kunlun.com/web/xb/image/code_and.jpg"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -12,3 +12,4 @@
 .idea
 
 *.pyc
+core/__pycache__/views.cpython-34.pyc

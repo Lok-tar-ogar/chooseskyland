@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
 from django.db.models import Q
-
+#sssss
 
 def index(request):
 
