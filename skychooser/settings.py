@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'ThunderMovie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pymovie',
-        'USER': 'arnold',
-        'PASSWORD': 'nuttertools0824',
-        'HOST': 'pyhelldb.cuiejbtb7cxp.ap-northeast-1.rds.amazonaws.com',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '3306',
     }
 }
