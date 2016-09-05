@@ -44,7 +44,7 @@ class Activities(models.Model):
         '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
     upLoadImg5 = models.FileField(
         '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
-    viewedTimes = models.IntegerField('浏览次数')
+    viewedTimes = models.IntegerField('浏览次数',default=1)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
 
     def __str__(self):
@@ -73,7 +73,7 @@ class News(models.Model):
         '上传新闻中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
     upLoadImg5 = models.FileField(
         '上传新闻中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
-    viewedTimes = models.IntegerField('浏览次数')
+    viewedTimes = models.IntegerField('浏览次数',default=1)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
 
     def __str__(self):
