@@ -1,137 +1,45 @@
-<!DOCTYPE HTML>
-<html xmlns:wb="http://open.weibo.com/wb">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Hell电影_免费电影_迅雷电影下载_高清电影_完整版_BD_HD_最新电影_百度网盘资源--{% block title %}
-    
-    {% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-    <meta name="keywords" content="百度网盘,迅雷下载,最新电影,中英字幕{% block keywords %}
-
-    {% endblock %}">
-<meta name="description" content="百度网盘,迅雷下载,最新电影,中英字幕{% block description %}
-
-{% endblock %} ">
-<link rel="shortcut icon" href="/static/images/favicon.ico">
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e649fb48fb4d663654bdd523eb3740aa";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<script type="text/javascript" src="//s.union.360.cn/55110.js"></script>
-
-    <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    } </script>
-    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Custom Theme files -->
-    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
-    <link href="/static/css/style.css" rel='stylesheet' type='text/css'/>
-    <!-- Custom Theme files -->
-    <!--webfont-->
-{#    <link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>#}
-{#    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>#}
-    <style>
-        a:hover, a:focus {
-            text-decoration: none;
-        }
-    </style>
-
-    <script src="/static/js/menu_jquery.js"></script>
-
-    {% block head %}
-    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link type="text/css" href="/css/style.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="/js/main.js"></script>
+    {% block head %} {% endblock %}
 </head>
 
-<body style="min-height: 800px">
-{#	<div class="header navbar-fixed-top">#}
-{#      <div class="container">#}
-{#  	     <div class="logo">#}
-{#			<h1><a href="/">屁眼电影网</a></h1>#}
-{#		 </div>#}
-{#		 <div class="search pull-right">#}
-{#			      <ul class="nav1">#}
-{#		            <li id="search">#}
-{#						<div >#}
-{#							<input id="search_text" type="text" name="search_text"  placeholder="Search"/>#}
-{#                            <input id="search_button" type="button" name="search_button"  >#}
+<body>
+<div id="main">
+    <div class="header01">
+        <ul>
+            <li class="nav01"><a href="#" title="官网首页">Home</a></li>
+            <li><a href="#" title="新闻公告">News</a></li>
+            <li class="logo"></li>
+            <li class="nav02" title="精彩活动"><a href="#" target="_blank">Activities</a></li>
+            <li><a href="#" title="官方论坛">BBS</a></li>
+        </ul>
+    </div>
+    <div class="header02"></div>
+    <div class="header03"></div>
+    {% block content %}
 
-{#                        </div>#}
-{#                    </li>#}
-{##}
-{#	              </ul>#}
-{#	            </div>#}
-{#		 <div class="clearfix"></div>#}
-{#		</div>#}
-{#	</div>#}
-{##}
-
-<div class="header">
-    <div class="header-inner">
-        <div class="nav">
-            <ul class="navbar">
-                <a class="logo" href="/"></a>
-                <li><a id="home" href="/">首页</a></li>
-
-                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>
-
-{#                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>#}
-                <li><a id="dylist" data-act="movies-click"  href="/movies">电影库</a></li>
-<li><a id="tvlist" data-act="movies-click"  href="/tvseries">电视剧库</a></li>
-{#                <li><a data-act="board-click" href="/">精选</a></li>#}
-
-            </ul>
-        </div>
-
-
-        <div id="form1">
-            <input id="search_text" type="search" placeholder="找影视剧、影人" maxlength="32" class="search">
-            <input id="search_button" type="button" value="" class="submit" data-act="search-click">
-            <script>
-                $(document).ready(function () {
-
-                    $('#search_text').keydown(function (e) {
-                        if (e.keyCode == 13) {
-                            location.replace('/result?key=' + $('#search_text').val())
-                        }
-                    });
-                    $("#search_button").click(
-                            function () {
-
-                                location.replace('/result?key=' + $('#search_text').val())
-
-                            });
-                });
-            </script>
+    {% endblock %}
+</div>
+<div class="klcommon_footer_bg" style="background-color:#FFF;">
+    <div class="klcommon_footer" style="background-color:#FFF;">
+        <div class="footer_logo"><a href="#"><img
+                src="http://static.kunlun.com/web/klcms/v7/images/logo.png"></a></div>
+        <div clsass="footer_text"><a target="_blank" href="#">公司介绍</a> | <a
+                target="_blank" href="#">加入我们</a> | <a target="_blank" href="#">联系我们</a>
+            | <a target="_blank" href="#">家长监护工程</a> |适合18岁以上用户<br>北京昆仑万维科技股份有限公司
+            京网文[2014]0934-234号 京ICP证080262号 京ICP备09007496号-2<br>
+            京新出音[2014]18号 新广出审[2014]463号 文网游备字[2013]M-RPG087号<br>
+            健康游戏忠告：抵制不良游戏，拒绝盗版游戏；注意自我保护，谨防受骗上当；适度游戏益脑，沉迷游戏伤身；合理安排时间，享受健康生活。
         </div>
     </div>
-
-</div>
-{% block content %}
-
-{% endblock %}
-<div class="footer" style="visibility: visible;">
-    <div class="container">
-    <p >
-骚猪电影所有资源信息均从互联网搜索而来，本站不对显示的内容承担责任
-如您认为本站页面信息侵犯了您的权益，请附上版权证明邮件告知，我们的邮箱：
-        dyhell@foxmail.com
-        本站尚在建设中,正处于Beta版本,如果建议和意见请发邮件至上邮箱。 我们会尽快回复。谢谢
-     </p>
-        <p> &copy;2016
-        骚猪电影 dyhell.com
-    </p>
-        </div>
 </div>
 </body>
 </html>
