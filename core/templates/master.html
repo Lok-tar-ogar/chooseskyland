@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <title>Hell电影_免费电影_迅雷电影下载_高清电影_完整版_BD_HD_最新电影_百度网盘资源--{% block title %}
+    
+    {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta name="keywords" content="百度网盘,迅雷下载,最新电影,中英字幕{% block keywords %}
+
+    {% endblock %}">
+<meta name="description" content="百度网盘,迅雷下载,最新电影,中英字幕{% block description %}
+
+{% endblock %} ">
+<link rel="shortcut icon" href="/static/images/favicon.ico">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e649fb48fb4d663654bdd523eb3740aa";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript" src="//s.union.360.cn/55110.js"></script>
+
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    <link href="/static/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom Theme files -->
+    <!--webfont-->
+{#    <link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>#}
+{#    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>#}
+    <style>
+        a:hover, a:focus {
+            text-decoration: none;
+        }
+    </style>
+
+    <script src="/static/js/menu_jquery.js"></script>
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body style="min-height: 800px">
+{#	<div class="header navbar-fixed-top">#}
+{#      <div class="container">#}
+{#  	     <div class="logo">#}
+{#			<h1><a href="/">屁眼电影网</a></h1>#}
+{#		 </div>#}
+{#		 <div class="search pull-right">#}
+{#			      <ul class="nav1">#}
+{#		            <li id="search">#}
+{#						<div >#}
+{#							<input id="search_text" type="text" name="search_text"  placeholder="Search"/>#}
+{#                            <input id="search_button" type="button" name="search_button"  >#}
+
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#	              </ul>#}
+{#	            </div>#}
+{#		 <div class="clearfix"></div>#}
+{#		</div>#}
+{#	</div>#}
+{##}
+
+<div class="header">
+    <div class="header-inner">
+        <div class="nav">
+            <ul class="navbar">
+                <a class="logo" href="/"></a>
+                <li><a id="home" href="/">首页</a></li>
+
+                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>
+
+{#                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>#}
+                <li><a id="dylist" data-act="movies-click"  href="/movies">电影库</a></li>
+<li><a id="tvlist" data-act="movies-click"  href="/tvseries">电视剧库</a></li>
+{#                <li><a data-act="board-click" href="/">精选</a></li>#}
+
+            </ul>
+        </div>
+
+
+        <div id="form1">
+            <input id="search_text" type="search" placeholder="找影视剧、影人" maxlength="32" class="search">
+            <input id="search_button" type="button" value="" class="submit" data-act="search-click">
+            <script>
+                $(document).ready(function () {
+
+                    $('#search_text').keydown(function (e) {
+                        if (e.keyCode == 13) {
+                            location.replace('/result?key=' + $('#search_text').val())
+                        }
+                    });
+                    $("#search_button").click(
+                            function () {
+
+                                location.replace('/result?key=' + $('#search_text').val())
+
+                            });
+                });
+            </script>
+        </div>
+    </div>
+
+</div>
+{% block content %}
+
+{% endblock %}
+<div class="footer" style="visibility: visible;">
+    <div class="container">
+    <p >
+骚猪电影所有资源信息均从互联网搜索而来，本站不对显示的内容承担责任
+如您认为本站页面信息侵犯了您的权益，请附上版权证明邮件告知，我们的邮箱：
+        dyhell@foxmail.com
+        本站尚在建设中,正处于Beta版本,如果建议和意见请发邮件至上邮箱。 我们会尽快回复。谢谢
+     </p>
+        <p> &copy;2016
+        骚猪电影 dyhell.com
+    </p>
+        </div>
+</div>
+</body>
+</html>

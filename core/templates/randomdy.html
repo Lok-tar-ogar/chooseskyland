@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+{% load poll_extras %}
+{% block content %}
+    <div class="banner1">
+        <div class="container">
+            <div class="span_1_of_1">
+                <h2><br>&nbsp;</h2>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#randomdy').prop('class', 'active');
+        });
+    </script>
+    <div class="grid_1">
+        <div class="container">
+            {% for film in films %}
+                <div class="col-xs-3 col-md-3" style="height: 450px;">
+                    <a href="/movie/{{ film.id }}" class="thumbnail">
+                        <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%">
+                    </a>
+                    <div class="caption">
+                        <p>[{{ film | movietags }}][{{ film.film_pub_year }}][<font style="color: #F1665E">{{ film.film_name }}</font>][迅雷下载][百度网盘][中 英 字幕]</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+{% endblock %}
