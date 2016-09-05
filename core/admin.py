@@ -3,14 +3,17 @@ from core.models import *
 # Register your models here.
 
 
-class Media:
-    js = (
+class TextFiledAdmin(admin.ModelAdmin):
 
-        '/static/js/tinymce/tinymce.min.js',
-        '/static/js/tinymce/adminconfig.js',
+    class Media:
+        js = (
 
-    )
-admin.site.register(News)
+            '/static/tinymce/tinymce.min.js',
+            '/static/tinymce/config.js',
+
+        )
+
+admin.site.register(News, TextFiledAdmin)
 # admin.site.register(FILM)
 # admin.site.register(TVSERIES)
 # admin.site.register(TAG_FILM)

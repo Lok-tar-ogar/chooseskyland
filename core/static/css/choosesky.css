@@ -29,7 +29,7 @@ a:hover{ text-decoration:underline;}
 .sidebar{ float:right; width:268px; margin-right:16px;_margin-right:8px;*margin-right:8px; padding-top:10px;}
 .content{ float:left; width:705px; margin-left:16px;_margin-left:8px;*margin-left:8px; padding-top:12px;}
 
-.focus{ width:705px; height:355px; background:url(http://static.kunlun.com/web/xb/image/1.jpg) no-repeat;}
+.focus{ width:700px; height:355px; }
 .add{margin-top:11px;}
 .side_left_add{width:268px; margin-bottom:5px;}
 .code{ background:url(http://static.kunlun.com/web/xb/image/tab_bg.png) no-repeat center top; width:268px; height:188px;}
