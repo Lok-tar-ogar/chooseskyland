@@ -30,7 +30,29 @@ class Carousel(models.Model):
         verbose_name = '轮播管理'
         ordering = ['-dimDate']  # sorted news by dimdate
 
+class Activities(models.Model):
+    newsTitle = models.CharField('活动标题', max_length=50)
+    newsDetail = models.TextField('活动详情(图片可以直接粘贴)', max_length=10000)
+    # obviously it is what it looks like.
+    upLoadImg1 = models.FileField(
+        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+    upLoadImg2 = models.FileField(
+        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+    upLoadImg3 = models.FileField(
+        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+    upLoadImg4 = models.FileField(
+        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+    upLoadImg5 = models.FileField(
+        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+    viewedTimes = models.IntegerField('浏览次数')
+    dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
 
+    def __str__(self):
+        return self.newsTitle
+
+    class Meta:
+        verbose_name = '活动'
+        ordering = ['-dimDate']  # sorted news by dimdate
 
 
 
