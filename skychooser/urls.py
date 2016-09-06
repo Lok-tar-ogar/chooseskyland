@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
     url(r'^news$', views.news),
-
+url(r'^news/(?P<id>\d+).aspx$',views.newsdetail),
 ]

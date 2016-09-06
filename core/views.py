@@ -17,5 +17,16 @@ def index(request):
 
 
 def news(req):
+    news=News.objects.all()
     return render(req,'news.html',locals())
+
+
+def newsdetail(req,id=0):
+
+    news=News.objects.filter(id=id)
+    try:
+        n=news[0]
+    except:
+        return Http404()
+    return render(req,'newsdetail.html',locals())
 
