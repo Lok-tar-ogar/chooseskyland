@@ -84,25 +84,69 @@ a:hover{ text-decoration:underline;}
 .mesg_03{ clear:both; text-align:center; line-height:25px;}
 
 
-.header05_news{ background:url(http://static.kunlun.com/web/xb/image/header06.jpg) repeat-y;}
-.header05_news .new_top{ background:url(http://static.kunlun.com/web/xb/image/header05_news.jpg) no-repeat center top;}
-.header05_news .new_bot{ background:url(http://static.kunlun.com/web/xb/image/header07.jpg) no-repeat center bottom; height:auto;min-height:800px;_height:800px; clear:both; padding-bottom:42px;}
-
-.page{ height:24px; text-align:center;line-height:24px; padding:20px 0px 40px 0px; width:705px;}
-.page a{color:#ff9000;}
-.page a:hover{text-decoration:underline;}
-.page input { width:34px; height:17px; background:#fff; border-top:1px solid #bcbcbc; border-bottom:none; border-left:none; border-right:none; text-align:center; color:#000;}
-
-.article{width:655px; padding:20px 0px 0px ;}
-.article h2{ color:#ff9000; font-size:14px; line-height:28px; text-align:center;}
-.article h6{font-size:12px;font-weight:normal;text-align:center;}
-.article img{ text-align:center; margin:22px auto;}
+.header05_news {
+    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header06.jpg") repeat-y scroll 0 0;
+    height:auto;
+}
+.header05_news .new_top {
+    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header05_news.jpg") no-repeat scroll center top;
+}
+.header05_news .new_bot {
+    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header07.jpg") no-repeat scroll center bottom;
+    clear: both;
+    height: auto;
+    min-height: 800px;
+    padding-bottom: 42px;
+}
+.page {
+    height: 24px;
+    line-height: 24px;
+    padding: 20px 0 40px;
+    text-align: center;
+    width: 705px;
+}
+.page a {
+    color: #ff9000;
+}
+.page a:hover {
+    text-decoration: underline;
+}
+.page input {
+    background: #fff none repeat scroll 0 0;
+    border-color: #bcbcbc -moz-use-text-color -moz-use-text-color;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    color: #000;
+    height: 17px;
+    text-align: center;
+    width: 34px;
+}
+.article {
+    padding: 20px 0 0;
+    width: 655px;
+}
+.article h2 {
+    color: #ff9000;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+.article h6 {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+}
+.article img {
+    margin: 22px auto;
+    text-align: center;
+}
 
 
 .example{
-  width:700px;
-  height:350px;
+  width:704px;
+  height:354px;
 }
 .example ol{position:relative;width: 200px;height: 20px;top:-40px;left:500px;}
 .example ol li{float:left;width: 27px;height: 27px;margin: 1px;background:url(../../static/img/btn02.png) no-repeat ;}
 .example ol li.seleted{background:url(../../static/img/btn01.png) no-repeat;}
+
