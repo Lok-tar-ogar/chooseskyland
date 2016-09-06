@@ -10,6 +10,7 @@
     margin: 0 auto;
     padding: 10px;
     width: 1190px;
+    background: #ebecf1;
 }
 .klcommon_footer .footer_logo {
     float: left;
@@ -37,7 +38,7 @@
     color: #f00;
 }
 .klcommon_provider {
-    background-color: #000;
+    background-color: #ebecf1;
     border: 1px solid #e3e3e3;
     color: #fff;
     font-size: 12px;
