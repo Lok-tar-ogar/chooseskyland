@@ -40,9 +40,9 @@ a:hover{ text-decoration:underline;}
   .codeTitle li.click_and{ background:url(http://static.kunlun.com/web/xb/image/code_click.png) no-repeat -134px 0px; height:32px; width:134px;}
   .code .codeCont{ width:113px; height:113px; padding-top:18px; padding-left:77px;}
 
-.header05{ background:url(http://static.kunlun.com/web/xb/image/header06.jpg) repeat-y;}
-.header05 .new_top{ background:url(http://static.kunlun.com/web/xb/image/header05.jpg) no-repeat center top;}
-.header05 .new_bot{ background:url(http://static.kunlun.com/web/xb/image/header07.jpg) no-repeat center bottom; height:auto;min-height:800px;_height:800px; clear:both; padding-bottom:42px;}
+.header05{ background:url(../../static/img/bar02_07.png) repeat-y;}
+.header05 .new_top{ background:url(../../static/img/header05_top.png) no-repeat center top;}
+.header05 .new_bot{ background:url(../../static/img/header05_bot.png) no-repeat center bottom; height:auto;min-height:800px;_height:800px; clear:both; padding-bottom:42px;}
 
 .news_more{ width:705px;padding-bottom:6px;height:31px;text-align:right;padding-top:12px;}
 .news_bg{ background:#1d3e52; width:705px; margin-bottom:11px;}
