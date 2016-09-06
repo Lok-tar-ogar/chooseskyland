@@ -8,8 +8,8 @@ class TextFiledAdmin(admin.ModelAdmin):
     class Media:
         js = (
 
-            '/static/tinymce/tinymce.min.js',
-            '/static/tinymce/config.js',
+            '/static/js/tinymce/tinymce.min.js',
+            '/static/js/tinymce/adminconfig.js',
 
         )
 
