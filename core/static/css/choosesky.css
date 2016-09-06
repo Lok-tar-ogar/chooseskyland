@@ -6,6 +6,7 @@ h1{ font-size:14px; font-weight:bold; color:#ff9000; line-height:28px;}
 h1 span{ font-size:12px; font-weight:normal; color:#abc4ce; float:right; padding-left:6px;}
 h1 a{color:#ff9000;}
 ul,li{ list-style:none;}
+
 img{ border:0;}
 .clear{ clear:both; height:0px; font-size:1px; line-height:0px;}
 .fltrt{ float:right;}
@@ -29,7 +30,7 @@ a:hover{ text-decoration:underline;}
 .sidebar{ float:right; width:268px; margin-right:16px;_margin-right:8px;*margin-right:8px; padding-top:10px;}
 .content{ float:left; width:705px; margin-left:16px;_margin-left:8px;*margin-left:8px; padding-top:12px;}
 
-.focus{ width:700px; height:355px; }
+.focus{ width:700px; height:370px; }
 .add{margin-top:11px;}
 .side_left_add{width:268px; margin-bottom:5px;}
 .code{ background:url(http://static.kunlun.com/web/xb/image/tab_bg.png) no-repeat center top; width:268px; height:188px;}
@@ -96,3 +97,12 @@ a:hover{ text-decoration:underline;}
 .article h2{ color:#ff9000; font-size:14px; line-height:28px; text-align:center;}
 .article h6{font-size:12px;font-weight:normal;text-align:center;}
 .article img{ text-align:center; margin:22px auto;}
+
+
+.example{
+  width:700px;
+  height:350px;
+}
+.example ol{position:relative;width: 200px;height: 20px;top:-40px;left:500px;}
+.example ol li{float:left;width: 27px;height: 27px;margin: 1px;background:url(../../static/img/btn02.png) no-repeat ;}
+.example ol li.seleted{background:url(../../static/img/btn01.png) no-repeat;}
