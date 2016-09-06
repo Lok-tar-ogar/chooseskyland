@@ -9,32 +9,48 @@
 {% block head %}
     <link rel="stylesheet" href="/static/css/luara.css"/>
     <link rel="stylesheet" href="/static/css/luara.left.css"/>
-    <script src="/static/js/jquery-1.8.3.min.js"></script>
+{#    <script src="/static/js/jquery-1.8.3.min.js"></script>#}
     <script src="/static/js/jquery.luara.0.0.1.min.js"></script>
+
+
 {% endblock %}
 {% block content %}
+    <script type="text/javascript">
+        $(function  () {
+            $("#ios-a").click(function () {
+                $("#ios").css("display", "none");
+                $("#erweima2").css("display", "none");
+                $("#android").css("display", "");
+                $("#erweima1").css("display", "");
+            });
+            $("#android-a").click(function () {
+                $("#ios").css("display", "");
+                $("#erweima2").css("display", "");
+                $("#android").css("display", "none");
+                $("#erweima1").css("display", "none")
+            });
+        });
+    </script>
     <div class="header04">
         <div class="sidebar">
             <div class="code w1">
-                <div id="title01">
-                    <div class="codeTitle">
-                        <ul>
-                            <li>IOS</li>
-                            <li class="click_and" onclick="javascript:showTxt('title0','2','2');">ANDROID</li>
-                        </ul>
-                    </div>
-                    <div class="codeCont"><img width="113" height="113"
-                                               src="http://static.kunlun.com/web/xb/image/code_ios.jpg"></div>
+
+                <div class="" style="float:left;" id="erweima1">
+                    <img src="/static/img/erweima.png">
                 </div>
-                <div style="display:none;" id="title02">
-                    <div class="codeTitle">
-                        <ul>
-                            <li class="click_ios" onclick="javascript:showTxt('title0','1','2');">IOS</li>
-                            <li>ANDROID</li>
-                        </ul>
-                    </div>
-                    <div class="codeCont"><img width="113" height="113"
-                                               src="http://static.kunlun.com/web/xb/image/code_and.jpg"></div>
+                <div class=""  style="float:left;margin-left: 0px;" id="android">
+                      <a href ="javascript:void(0);" id="android-a" >
+                        <img src="/static/img/btn-ios.png">
+                      </a>
+                </div>
+
+                <div class="" style="float:left;display:none;" id="erweima2">
+                    <img src="/static/img/erweima.png">
+                </div>
+                <div class=""  style="float:left;margin-left: 0px;display:none;" id="ios">
+                      <a href ="javascript:void(0);" id="ios-a">
+                        <img src="/static/img/btn-android.png">
+                      </a>
                 </div>
 
             </div>
@@ -53,7 +69,7 @@
         <div class="content">
             <div class="focus">
 
-                <div class="example" style=" ">
+                <div class="example" style="margin-top: -1px;margin-left: 3px;">
                     <ul>
                         <li><a href="#"><img src="/static/img/1.jpg" style="width: 704px;height:354px;" alt="1"/></a>
                         </li>
@@ -95,13 +111,14 @@
             <div class="new_bot">
                 <div class="sidebar">
                     <div class="offcial_wx">
-                        <div class="sidebar_leftBg">
+                        <div class="sidebar_leftBg" style="margin-bottom: 11px;">
                             <div class="sidebar_leftTop">
                                 <div class="sidebar_leftBot">
                                     <div class="sidebar_Title">
-                                        <img width="101" height="30"
-                                             src="http://static.kunlun.com/web/xb/image/t_server.jpg">
+                                        <img width="103" height="20" style="margin-top: 7px;"
+                                             src="/static/img/serverList.png">
                                     </div>
+                                    <img src="/static/img/bar_side_top.png">
                                     <div class="sidebar_Box sidebar_BoxServer">
                                         <p>
                                             <span>2014-01-24</span>
@@ -131,10 +148,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sidebar_leftBg">
+                        <div class="sidebar_leftBg" style="margin-bottom: 11px;">
                             <div class="sidebar_leftTop">
                                 <div class="sidebar_leftBot">
-                                    <div class="sidebar_Title"></div>
+                                    <div class="sidebar_Title">
+                                        <img width="103" height="20" style="margin-top: 7px;"
+                                             src="/static/img/hotline.png">
+
+                                    </div>
+                                    <img src="/static/img/bar_side_top.png">
                                     <div class="sidebar_Box sidebar_BoxInfo">
                                         <p>
                                             官方玩家Q群:85152931
@@ -148,13 +170,14 @@
                             </div>
                         </div>
                         <div class="clear"></div>
-                        <div class="sidebar_leftBg">
+                        <div class="sidebar_leftBg" style="margin-bottom: 11px;">
                             <div class="sidebar_leftTop">
                                 <div class="sidebar_leftBot">
                                     <div class="sidebar_Title">
-                                        <img width="94" height="29"
-                                             src="http://static.kunlun.com/web/xb/image/t_links.jpg">
+                                        <img width="103" height="20" style="margin-top: 7px;"
+                                             src="/static/img/cooperator.png">
                                     </div>
+                                    <img src="/static/img/bar_side_top.png">
                                     <div class="sidebar_Box sidebar_BoxLinks">
                                         <ul>
 
@@ -178,7 +201,7 @@
                             <div class="news_bot">
                                 <div class="news_img fltlft">
                                     <a style="" title="【仙变】红装系统全面展现"
-                                       href="http://xb.kunlun.com/2014/newslist_0402/85.html">
+                                       href="#">
                                         <img width="224" height="138" src="/static/img/header1.png">
                                     </a>
                                 </div>
@@ -186,16 +209,16 @@
                                     <h1>
                                         <span>2014-04-02</span>
                                         <a style="" title="【仙变】红装系统全面展现"
-                                           href="http://xb.kunlun.com/2014/newslist_0402/85.html">【仙变】红装系统全面展现</a>
+                                           href="#">【仙变】红装系统全面展现</a>
                                     </h1>
                                     <p>
-                                        <a href="http://xb.kunlun.com/2014/newslist_0402/85.html">当强力的紫装已经不能满足胃口的时候，你是否在寻找新的突破？！
+                                        <a href="#" style="font-family: 微软雅黑;font-size: 12px; color: #fcd6ff;">当强力的紫装已经不能满足胃口的时候，你是否在寻找新的突破？！
                                             当千辛万苦终于开启了金身系统的时候，你是否为装备搭配而烦恼？！ 当穿着强十的紫装却依旧被人虐的时候，你是否迫</a>
                                     </p>
                                     <p class="more">
-                                        <a title="更多" href="http://xb.kunlun.com/2014/newslist_0402/85.html">
+                                        <a title="更多" href="#">
                                             <img width="43" height="14"
-                                                 src="http://static.kunlun.com/web/xb/image/more1.jpg">
+                                                 src="/static/img/btn-+more.png">
                                         </a>
                                     </p>
                                 </div>
