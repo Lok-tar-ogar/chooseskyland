@@ -32,10 +32,11 @@ class Carousel(models.Model):
 
 class Activities(models.Model):
     newsTitle = models.CharField('活动标题', max_length=50)
+    upLoadImg1 = models.FileField(
+        '活动封面', blank=True, null=True, upload_to='img/')
     newsDetail = models.TextField('活动详情(图片可以直接粘贴)', max_length=10000)
     # obviously it is what it looks like.
-    upLoadImg1 = models.FileField(
-        '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
+
     upLoadImg2 = models.FileField(
         '上传活动中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
     upLoadImg3 = models.FileField(
@@ -61,10 +62,10 @@ class Activities(models.Model):
 
 class News(models.Model):
     newsTitle = models.CharField('新闻标题', max_length=50)
+    upLoadImg1 = models.FileField(
+        '活动封面', blank=True, null=True, upload_to='img/')
     newsDetail = models.TextField('新闻详情', max_length=10000)
     # obviously it is what it looks like.
-    upLoadImg1 = models.FileField(
-        '上传新闻中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
     upLoadImg2 = models.FileField(
         '上传新闻中的图片，引用图片请采用"/static/img/xxx.xx"格式', blank=True, null=True, upload_to='img/')
     upLoadImg3 = models.FileField(

@@ -17,5 +17,6 @@ def index(request):
 
 
 def news(req):
+    news=News.objects.all()
     return render(req,'news.html',locals())
 
