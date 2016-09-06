@@ -60,11 +60,11 @@
                     <div class="news_bg">
             <div class="news_top">
               <div class="news_bot">
-                <div class="news_img fltlft"><a style="" title="{{ new.newsTitle }}" href="news/{{ new.id }}"><img width="224" height="138" src="/static/{{ new.upLoadImg1 }}"></a></div>
+                <div class="news_img fltlft"><a style="" title="{{ new.newsTitle }}" href="news/{{ new.id }}.aspx"><img width="224" height="138" src="{{ new.upLoadImg1.name | imgurl }}"></a></div>
                 <div class="news_cont fltrt">
-                  <h1><span>2014-04-02</span><a style="" title="{{ new.newsTitle }}" href="http://xb.kunlun.com/2014/newslist_0402/85.html">{{ new.newsTitle }}</a></h1>
+                  <h1><span>2014-04-02</span><a style="" title="{{ new.newsTitle }}" href="news/{{ new.id }}.aspx">{{ new.newsTitle }}</a></h1>
                   <p><a href="http://xb.kunlun.com/2014/newslist_0402/85.html">{{ new.newsDetail | safe | Brflen:50 }}</a></p>
-                  <p class="more"><a title="更多" href="http://xb.kunlun.com/2014/newslist_0402/85.html"><img width="43" height="14" src="http://static.kunlun.com/web/xb/image/more1.jpg"></a></p>
+                  <p class="more"><a title="更多" href="news/{{ new.id }}.aspx"><img width="43" height="14" src="http://static.kunlun.com/web/xb/image/more1.jpg"></a></p>
                 </div>
               </div>
             </div>
