@@ -196,27 +196,28 @@
                             <img width="83" height="31" src="/static/img/btn-more.png">
                         </a>
                     </div>
+                    {% if news %}
+                        {% for i in news %}
                     <div class="news_bg">
                         <div class="news_top">
                             <div class="news_bot">
                                 <div class="news_img fltlft">
-                                    <a style="" title="【仙变】红装系统全面展现"
-                                       href="#">
-                                        <img width="224" height="138" src="/static/img/header1.png">
+                                    <a style="" title="{{ i.newsTitle }}"
+                                       href="news/{{ i.id }}.aspx">
+                                        <img width="224" height="138" src="{{ i.upLoadImg1.name | imgurl }}">
                                     </a>
                                 </div>
                                 <div class="news_cont fltrt">
                                     <h1>
-                                        <span>2014-04-02</span>
-                                        <a style="" title="【仙变】红装系统全面展现"
-                                           href="#">【仙变】红装系统全面展现</a>
+                                        <span>{{ new.dimDate }}</span>
+                                        <a style="" title="{{ i.newsTitle }}"
+                                           href="news/{{ i.id }}.aspx">{{ i.newsTitle }}</a>
                                     </h1>
                                     <p>
-                                        <a href="#" style="font-family: 微软雅黑;font-size: 12px; color: #fcd6ff;">当强力的紫装已经不能满足胃口的时候，你是否在寻找新的突破？！
-                                            当千辛万苦终于开启了金身系统的时候，你是否为装备搭配而烦恼？！ 当穿着强十的紫装却依旧被人虐的时候，你是否迫</a>
+                                        <a href="news/{{ i.id }}.aspx" style="font-family: 微软雅黑;font-size: 12px; color: #fcd6ff;">{{ i.newsDetail | Brflen:100  }}</a>
                                     </p>
                                     <p class="more">
-                                        <a title="更多" href="#">
+                                        <a title="更多" href="news/{{ i.id }}.aspx">
                                             <img width="43" height="14"
                                                  src="/static/img/btn-+more.png">
                                         </a>
@@ -225,6 +226,8 @@
                             </div>
                         </div>
                     </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>

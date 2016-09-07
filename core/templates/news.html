@@ -65,14 +65,14 @@
                                 <h1><span>{{ new.dimDate }}</span><a style="" title="{{ new.newsTitle }}" href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsTitle }}</a></h1>
                                 <p><a href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsDetail | Brflen:100  }}</a></p>
                                 <p class="more"><a title="更多" href="news/{{ new.id }}.aspx"><img width="43" height="14" src="http://static.kunlun.com/web/xb/image/more1.jpg"></a></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            {% endfor %}
+                    {% endfor %}
 
-    </div>
-  </div>
-    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

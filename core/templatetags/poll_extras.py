@@ -11,6 +11,8 @@ def Brflen(value, arg):
     return value[:arg] + '...' if len(value) > 10 else value[:arg]
 @register.filter(name="imgurl")
 def Brflen(value):
+    if value.upLoadImg1.name!='':
+        return value.upLoadImg1.name[4:]
     r = re.compile('src="(.+?)"')
     a = r.search(value.newsDetail)
     if a:
@@ -20,7 +22,7 @@ def Brflen(value):
         return a[0].replace('&amp;','&')
     else:
 
-        return value.upLoadImg1.name[4:]
+        return ""
 
 @register.filter(name="split_movie")
 def split_movie(value):
