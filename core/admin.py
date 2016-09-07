@@ -14,6 +14,7 @@ class TextFiledAdmin(admin.ModelAdmin):
         )
 
 admin.site.register(News, TextFiledAdmin)
+admin.site.register(Activities, TextFiledAdmin)
 # admin.site.register(FILM)
 # admin.site.register(TVSERIES)
 # admin.site.register(TAG_FILM)

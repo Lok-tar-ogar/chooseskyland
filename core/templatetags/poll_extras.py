@@ -1,15 +1,26 @@
 from django import template
 from core.models import *
 register = template.Library()
-
+import re
 
 
 @register.filter(name="Brflen")
 def Brflen(value, arg):
+    pattern = re.compile('<.+?>')
+    value=pattern.sub('', value)
     return value[:arg] + '...' if len(value) > 10 else value[:arg]
 @register.filter(name="imgurl")
 def Brflen(value):
-    return value[4:]
+    r = re.compile('src="(.+?)"')
+    a = r.search(value.newsDetail)
+    if a:
+        a=a.groups()
+
+    if a:
+        return a[0].replace('&amp;','&')
+    else:
+
+        return value.upLoadImg1.name[4:]
 
 @register.filter(name="split_movie")
 def split_movie(value):
