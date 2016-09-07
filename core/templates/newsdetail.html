@@ -30,18 +30,30 @@
                 <div class="sidebar">
                     <div class="code w1">
 
-                        <div class="" style="float:left;" id="erweima1">
-                            <img src="/static/img/erweima.png">
-                        </div>
+                        {% if android %}
+                            <div class="" style="float:left;" id="erweima1">
+                                <img src="{% static android.Image %}" style="width: 190px;height: 190px;">
+                            </div>
+                        {% else %}
+                            <div class="" style="float:left;" id="erweima1">
+                                <img src="/static/img/erweima.png">
+                            </div>
+                        {% endif %}
                         <div class="" style="float:left;margin-left: 0px;" id="android">
                             <a href="javascript:void(0);" id="android-a">
                                 <img src="/static/img/btn-ios.png">
                             </a>
                         </div>
 
-                        <div class="" style="float:left;display:none;" id="erweima2">
-                            <img src="/static/img/erweima.png">
-                        </div>
+                        {% if ios %}
+                            <div class="" style="float:left;display:none;" id="erweima2">
+                                <img src="{% static ios.Image %}" style="width: 190px;height: 190px;">
+                            </div>
+                        {% else %}
+                            <div class="" style="float:left;display:none;" id="erweima2">
+                                <img src="/static/img/erweima.png">
+                            </div>
+                        {% endif %}
                         <div class="" style="float:left;margin-left: 0px;display:none;" id="ios">
                             <a href="javascript:void(0);" id="ios-a">
                                 <img src="/static/img/btn-android.png">
@@ -49,15 +61,27 @@
                         </div>
 
                     </div>
-                    <div class="side_left_add"><a target="itunes_store"
-                                                  href="#"
-                                                  title=""><img width="268" height="82"
+                    <div class="side_left_add">
+                        {% if android %}
+                            <a target="" href="{{ android.apk }}" title=""><img width="268" height="82"
+                                                                                src="/static/img/androiddownloads.png"></a>
+                        {% else %}
+                            <a target="" href="#" title=""><img width="268" height="82"
                                                                 src="/static/img/androiddownloads.png"></a>
+                        {% endif %}
                     </div>
-                    <div class="side_left_add"><a
-                            href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"
-                            title=""><img width="268" height="82"
-                                          src="/static/img/iosdownloads.png"></a></div>
+                    <div class="side_left_add">
+                        {% if ios %}
+                            <a target="itunes_store" href="{{ ios.Linkto }}"
+                               title=""><img width="268" height="82"
+                                             src="/static/img/iosdownloads.png"></a>
+                        {% else %}
+                            <a target="itunes_store" href="#"
+                               title=""><img width="268" height="82"
+                                             src="/static/img/iosdownloads.png"></a>
+
+                        {% endif %}
+                    </div>
                     <div class="sidebar_leftBg" style="margin-bottom: 11px;">
                         <div class="sidebar_leftTop">
                             <div class="sidebar_leftBot">
@@ -67,30 +91,12 @@
                                 </div>
                                 <img src="/static/img/bar_side_top.png">
                                 <div class="sidebar_Box sidebar_BoxServer">
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
-                                    <p>
-                                        <span>2014-01-24</span>
-                                        S38 忠肝义胆
-                                    </p>
+                                    {% for i in serverList %}
+                                        <p>
+                                            <span>{{ i.dimDate | date:"Y-m-d" }}</span>
+                                            {{ i.name }}
+                                        </p>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -103,7 +109,8 @@
                                          src="/static/img/hotline.png">
                                 </div>
                                 <img src="/static/img/bar_side_top.png">
-                                <div class="sidebar_Box sidebar_BoxInfo" style="color: #fcd6ff;font-size: 10px;font-family: Microsoft YaHei;">
+                                <div class="sidebar_Box sidebar_BoxInfo"
+                                     style="color: #fcd6ff;font-size: 10px;font-family: Microsoft YaHei;">
                                     <p>
                                         官方玩家Q群：438817071
                                         <br>
@@ -141,13 +148,10 @@
                     <div class="news_bg">
                         <div class="news_top">
                             <div class="news_bot">
-
                                 <div class="article">
-
                                     {{ n.newsDetail | safe }}
                                 </div>
                                 <br class="clear">
-
                             </div>
                         </div>
                     </div>

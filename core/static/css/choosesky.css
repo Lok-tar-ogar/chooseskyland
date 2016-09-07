@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body,html,div,p,h1,h2,h3,h4,h5,h6,img,input,span,img,ul,li,dd,dt,dl,object,iframe,a,a:hover{ padding:0px; margin:0px;}
-body{ background: url(../../static/img/headerbg.png) no-repeat center top #ebecf1; color:#abc4ce; line-height:22px; font-family:"microsoft yahei",Arial; font-size:12px;}
+body{ background: url(../../static/img/headerbg.png) no-repeat center top #ebecf1; color:#abc4ce; line-height:22px; font-family:"microsoft yahei",Arial; font-size:12px; min-width:1200px;}
 h1{ font-size:14px; font-weight:bold; color:#ff9000; line-height:28px;}
 h1 span{ font-size:10px; font-weight:normal; color:#fcd6ff; float:right; padding-left:6px;font-family:"微软雅黑"}
 h1 a{color:#2bffaf; font-size:14px;font-family:"黑体";}
@@ -25,7 +25,7 @@ a:hover{ text-decoration:underline;}
 .header01 li.nav02{margin-right:55px;}
 .header02{ background:url(../../static/img/header2.png) no-repeat 0px 0px; height:232px;}
 .header03{ background:url(../../static/img/header3.png) no-repeat 0px 0px; height:155px;}
-.header04{ background:url(../../static/img/bar.png) no-repeat 0px 0px; height:369px;}
+.header04{ background:url(../../static/img/bar02_03.png) no-repeat 0px 0px; height:369px;}
 
 .sidebar{ float:right; width:268px; margin-right:16px;_margin-right:8px;*margin-right:8px; padding-top:10px;}
 .content{ float:left; width:705px; margin-left:16px;_margin-left:8px;*margin-left:8px; padding-top:12px;}
