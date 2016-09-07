@@ -2,20 +2,35 @@
 from django.db import models
 
 
+class apk_type(models.Model):
+    name = models.CharField('apk类型',max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = '二维码类型'
+        verbose_name_plural = '二维码类型'
+        # ordering = ['-dimDate']  # sorted news by dimdate
+
+
 class NewsImg(models.Model):
     apk = models.FileField('最新apk', upload_to='core/static/img/')
     #Linkto = models.CharField('链接地址（可为空）', max_length=50, blank=True)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
+    apktype = models.ForeignKey(apk_type)
 
     def __str__(self):
         return str(self.apk.name.split('/')[-1])+'--'+str(self.dimDate)
 
     class Meta:
         verbose_name = 'apk下载地址'
+        verbose_name_plural = 'apk下载地址'
         ordering = ['-dimDate']  # sorted news by dimdate
+
+
 class serverno(models.Model):
     name = models.CharField('大区名',max_length=50)
-    Linkto = models.CharField('链接地址（可为空）', max_length=50, blank=True)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
 
     def __str__(self):
@@ -23,6 +38,7 @@ class serverno(models.Model):
 
     class Meta:
         verbose_name = '新开服务器大区'
+        verbose_name_plural = '新开服务器大区'
         ordering = ['-dimDate']  # sorted news by dimdate
 
 
@@ -39,6 +55,7 @@ class Carousel(models.Model):
 
     class Meta:
         verbose_name = '轮播管理'
+        verbose_name_plural = '轮播管理'
         ordering = ['-dimDate']  # sorted news by dimdate
 
 class Activities(models.Model):
@@ -64,6 +81,7 @@ class Activities(models.Model):
 
     class Meta:
         verbose_name = '活动'
+        verbose_name_plural = '活动'
         ordering = ['-dimDate']  # sorted news by dimdate
 
 
@@ -93,6 +111,7 @@ class News(models.Model):
 
     class Meta:
         verbose_name = '新闻'
+        verbose_name_plural = '新闻'
         ordering = ['-dimDate']  # sorted news by dimdate
 
 

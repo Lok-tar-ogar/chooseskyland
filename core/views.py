@@ -12,8 +12,14 @@ from django.db.models import Q
 #sssss
 
 def index(request):
-    news = News.objects.all().order_by("dimDate")
+    news = News.objects.all()
     news = news[0:4]
+
+    serverList = serverno.objects.all()
+    serverList = serverList[0:6]
+
+    # ios =
+
     return  render(request,'index.html',locals())
 
 
