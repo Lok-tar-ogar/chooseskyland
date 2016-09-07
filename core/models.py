@@ -3,15 +3,26 @@ from django.db import models
 
 
 class NewsImg(models.Model):
-    Image = models.FileField('图片（496*360）', upload_to='core/static/img/')
+    apk = models.FileField('最新apk', upload_to='core/static/img/')
+    #Linkto = models.CharField('链接地址（可为空）', max_length=50, blank=True)
+    dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
+
+    def __str__(self):
+        return str(self.apk.name.split('/')[-1])+'--'+str(self.dimDate)
+
+    class Meta:
+        verbose_name = 'apk下载地址'
+        ordering = ['-dimDate']  # sorted news by dimdate
+class serverno(models.Model):
+    name = models.CharField('大区名',max_length=50)
     Linkto = models.CharField('链接地址（可为空）', max_length=50, blank=True)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
 
     def __str__(self):
-        return self.Linkto
+        return self.name
 
     class Meta:
-        verbose_name = '首页图片新闻'
+        verbose_name = '新开服务器大区'
         ordering = ['-dimDate']  # sorted news by dimdate
 
 

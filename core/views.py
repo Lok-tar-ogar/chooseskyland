@@ -20,6 +20,10 @@ def index(request):
 def news(req):
     news=News.objects.all()
     type='news'
+    try:
+        apklink=NewsImg.objects.all()[0].apk.name[4:]
+    except:
+        apklink=""
     return render(req,'news.html',locals())
 def activity(req):
     news=Activities.objects.all()
