@@ -28,6 +28,10 @@ def news(req):
 def activity(req):
     news=Activities.objects.all()
     type='act'
+    try:
+        apklink=NewsImg.objects.all()[0].apk.name[4:]
+    except:
+        apklink=""
     return render(req,'news.html',locals())
 
 def newsdetail(req,id=0):
@@ -37,6 +41,10 @@ def newsdetail(req,id=0):
         n=news[0]
     except:
         return Http404()
+    try:
+        apklink=NewsImg.objects.all()[0].apk.name[4:]
+    except:
+        apklink=""
     return render(req,'newsdetail.html',locals())
 def activitydetail(req,id=0):
 
@@ -45,4 +53,8 @@ def activitydetail(req,id=0):
         n=news[0]
     except:
         return Http404()
+    try:
+        apklink=NewsImg.objects.all()[0].apk.name[4:]
+    except:
+        apklink=""
     return render(req,'newsdetail.html',locals())
