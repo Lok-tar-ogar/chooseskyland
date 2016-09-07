@@ -12,7 +12,8 @@ from django.db.models import Q
 #sssss
 
 def index(request):
-
+    news = News.objects.all().order_by("dimDate")
+    news = news[0:4]
     return  render(request,'index.html',locals())
 
 
