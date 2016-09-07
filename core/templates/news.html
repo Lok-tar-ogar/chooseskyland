@@ -7,64 +7,153 @@
     择天大陆-新闻公告
 {% endblock %}
 {% block content %}
-  <div class="header05_news">
-    <div class="new_top">
-      <div class="new_bot">
-      <!-------sidebar------>
-        <div class="sidebar">
-      <div class="side_left_add"><a target="itunes_store" href="https://itunes.apple.com/cn/app/xian-bian/id662008120?&amp;mt=8&amp;uo=4"><img width="268" height="82" src="http://static.kunlun.com/web/xb/image/app_store.png"></a></div>
-      <div class="side_left_add"><a href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"><img width="268" height="82" src="http://static.kunlun.com/web/xb/image/android_download.png"></a></div>
-      <div class="code w1">
-      <div id="title01">
-        <div class="codeTitle">
-          <ul>
-            <li>IOS</li>
-            <li class="click_and" onclick="javascript:showTxt('title0','2','2');">ANDROID</li>
-          </ul>
-        </div>
-        <div class="codeCont"><img width="113" height="113" src="http://static.kunlun.com/web/xb/image/code_ios.jpg"></div>
-      </div>
-      <div style="display:none;" id="title02">
-        <div class="codeTitle">
-          <ul>
-            <li class="click_ios" onclick="javascript:showTxt('title0','1','2');">IOS</li>
-            <li>ANDROID</li>
-          </ul>
-        </div>
-        <div class="codeCont"><img width="113" height="113" src="http://static.kunlun.com/web/xb/image/code_and.jpg"></div>
-      </div>
-      </div>
-      <div class="side_left_add"><a target="_blank" href="http://weibo.com/kunlunxb"><img width="268" height="89" src="http://static.kunlun.com/web/xb/image/weibo_sina.png"></a></div>
-          <div class="offcial_wx"><a href="#"><img width="266" height="133" src="http://static.kunlun.com/web/xb/image/weixin.jpg"></a></div>
-          <!--------客服信息------>
-          <div class="sidebar_leftBg">
-            <div class="sidebar_leftTop">
-              <div class="sidebar_leftBot">
-                <div class="sidebar_Title"></div>
-                <div class="sidebar_Box sidebar_BoxInfo">
-                   <p>官方玩家Q群:85152931<br>
-客服热线:010-85070333<br>
-投诉邮箱:tousu@kunlun.com</p>
+    <script type="text/javascript">
+        $(function () {
+            $("#ios-a").click(function () {
+                $("#ios").css("display", "none");
+                $("#erweima2").css("display", "none");
+                $("#android").css("display", "");
+                $("#erweima1").css("display", "");
+            });
+            $("#android-a").click(function () {
+                $("#ios").css("display", "");
+                $("#erweima2").css("display", "");
+                $("#android").css("display", "none");
+                $("#erweima1").css("display", "none")
+            });
+        });
+    </script>
+    <div class="header05_news">
+        <div class="new_top">
+            <div class="new_bot">
+                <!-------sidebar------>
+                <div class="sidebar">
+                    <div class="code w1">
+
+                        <div class="" style="float:left;" id="erweima1">
+                            <img src="/static/img/erweima.png">
+                        </div>
+                        <div class="" style="float:left;margin-left: 0px;" id="android">
+                            <a href="javascript:void(0);" id="android-a">
+                                <img src="/static/img/btn-ios.png">
+                            </a>
+                        </div>
+
+                        <div class="" style="float:left;display:none;" id="erweima2">
+                            <img src="/static/img/erweima.png">
+                        </div>
+                        <div class="" style="float:left;margin-left: 0px;display:none;" id="ios">
+                            <a href="javascript:void(0);" id="ios-a">
+                                <img src="/static/img/btn-android.png">
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="side_left_add"><a target="itunes_store"
+                                                  href="#"
+                                                  title=""><img width="268" height="82"
+                                                                src="/static/img/androiddownloads.png"></a>
+                    </div>
+                    <div class="side_left_add"><a
+                            href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"
+                            title=""><img width="268" height="82"
+                                          src="/static/img/iosdownloads.png"></a></div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/serverList.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxServer">
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/hotline.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxInfo" style="color: #fcd6ff;font-size: 10px;font-family: Microsoft YaHei;">
+                                    <p>
+                                        官方玩家Q群：438817071
+                                        <br>
+                                        客服邮箱：ztdlkf@9key.net
+                                        <br>
+                                        微信订阅号：（这个申请下来之后再添加上）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/cooperator.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxLinks">
+                                    <ul>
+
+                                    </ul>
+                                    <br class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="clear"></div>
-
-        </div>
-      <!-------sidebar over------>
-        <div class="content">
-          <div style="height:60px;" class="news_more"></div>
-
-            {% for new in news %}
-                <div class="news_bg">
-                    <div class="news_top">
-                        <div class="news_bot">
-                            <div class="news_img fltlft"><a style="" title="{{ new.newsTitle }}" href="/{{ type }}/{{ new.id }}.aspx"><img width="224" height="138" src="{{ new | imgurl }}"></a></div>
-                            <div class="news_cont fltrt">
-                                <h1><span>{{ new.dimDate }}</span><a style="" title="{{ new.newsTitle }}" href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsTitle }}</a></h1>
-                                <p><a href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsDetail | Brflen:100  }}</a></p>
-                                <p class="more"><a title="更多" href="news/{{ new.id }}.aspx"><img width="43" height="14" src="http://static.kunlun.com/web/xb/image/more1.jpg"></a></p>
+                <!-------sidebar over------>
+                <div class="content">
+                     <div class="news_more" style="height:60px;"></div>
+                    {% for new in news %}
+                        <div class="news_bg">
+                            <div class="news_top">
+                                <div class="news_bot">
+                                    <div class="news_img fltlft"><a style="" title="{{ new.newsTitle }}"
+                                                                    href="/{{ type }}/{{ new.id }}.aspx"><img
+                                            width="224" height="138" src="{{ new | imgurl }}"></a></div>
+                                    <div class="news_cont fltrt">
+                                        <h1><span>{{ new.dimDate }}</span><a style="" title="{{ new.newsTitle }}"
+                                                                             href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsTitle }}</a>
+                                        </h1>
+                                        <p><a href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsDetail | Brflen:100 }}</a>
+                                        </p>
+                                        <p class="more"><a title="更多" href="news/{{ new.id }}.aspx"><img width="43"
+                                                                                                         height="14"
+                                                                                                         src="http://static.kunlun.com/web/xb/image/more1.jpg"></a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -72,6 +161,7 @@
                     {% endfor %}
 
                 </div>
+                <br class="clear">
             </div>
         </div>
     </div>

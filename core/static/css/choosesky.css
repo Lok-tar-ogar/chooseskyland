@@ -3,8 +3,8 @@
 body,html,div,p,h1,h2,h3,h4,h5,h6,img,input,span,img,ul,li,dd,dt,dl,object,iframe,a,a:hover{ padding:0px; margin:0px;}
 body{ background: url(../../static/img/headerbg.png) no-repeat center top #ebecf1; color:#abc4ce; line-height:22px; font-family:"microsoft yahei",Arial; font-size:12px;}
 h1{ font-size:14px; font-weight:bold; color:#ff9000; line-height:28px;}
-h1 span{ font-size:12px; font-weight:normal; color:#fcd6ff; float:right; padding-left:6px;font-family:"微软雅黑"}
-h1 a{color:#fcd6ff; font-size:14px;font-family:"黑体";}
+h1 span{ font-size:10px; font-weight:normal; color:#fcd6ff; float:right; padding-left:6px;font-family:"微软雅黑"}
+h1 a{color:#2bffaf; font-size:14px;font-family:"黑体";}
 ul,li{ list-style:none;}
 
 img{ border:0;}
@@ -13,7 +13,7 @@ img{ border:0;}
 .fltlft{ float:left;}
 .w1{ margin-bottom:5px;}
 .w2{ margin-right:5px;}
-a{color:#abc4ce; text-decoration:none;}
+a{color:#fcd6ff; text-decoration:none;font-size: 12px;font-family: "Microsoft YaHei";}
 a:hover{ text-decoration:underline;}
 
 #main{ width:1012px; margin:auto;}
@@ -33,7 +33,7 @@ a:hover{ text-decoration:underline;}
 .focus{ width:700px; height:370px; }
 .add{margin-top:11px;}
 .side_left_add{width:268px; margin-bottom:5px;}
-.code{ background:url(http://static.kunlun.com/web/xb/image/tab_bg.png) no-repeat center top; width:268px; height:188px;}
+.code{  width:268px; height:188px;}
   .code .codeTitle{ height:32px;}
   .codeTitle li{ height:32px; width:134px; float:left; text-align:center; font-size:16px; color:#5c5c5c; line-height:32px; cursor:pointer;}
   .codeTitle li.click_ios{ background:url(http://static.kunlun.com/web/xb/image/code_click.png) no-repeat 0px 0px; height:32px; width:134px;}
@@ -53,12 +53,12 @@ a:hover{ text-decoration:underline;}
 .more{ padding-top:8px;}
 
 .offcial_wx{ padding-top:4px; padding-bottom:10px;}
-.sidebar_leftBg{ background:#2b3154; height:auto; width:266px;}
+.sidebar_leftBg{ background:#2b3154; height:auto; width:260px;}
 .sidebar_leftBg .sidebar_leftTop{ background:url(../../static/img/bar_side_bg.png) no-repeat center top;}
 .sidebar_leftBg .sidebar_leftBot{ background:url(../../static/img/bar_side_bot.png) no-repeat center bottom;height:auto;min-height:100px;_height:100px; clear:both; padding-bottom:29px;}
 .sidebar_Title{ padding-left:7px; height:30px;}
 .sidebar_Box{ padding-top:15px; padding-left:20px; width:227px;}
-.sidebar_BoxServer p{ line-height:28px; border-bottom:1px solid #fcd6ff; height:28px;color: #fcd6ff;font-size: 13px;}
+.sidebar_BoxServer p{ line-height:28px; border-bottom:1px solid #fcd6ff; height:28px;color: #fcd6ff;font-size: 10px;font-family: "Microsoft YaHei";}
 .sidebar_BoxServer p span{ float:right; margin-left:6px;}
 .sidebar_BoxInfo p{ padding-left:15px;}
 .sidebar_BoxInfo span{ padding-left:45px;}
@@ -85,14 +85,14 @@ a:hover{ text-decoration:underline;}
 
 
 .header05_news {
-    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header06.jpg") repeat-y scroll 0 0;
+    background: url("../../static/img/bar02_07.png") repeat-y scroll 0 0;
     height:auto;
 }
 .header05_news .new_top {
-    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header05_news.jpg") no-repeat scroll center top;
+    background: url("../../static/img/news01_03.png") no-repeat scroll center top;
 }
 .header05_news .new_bot {
-    background: rgba(0, 0, 0, 0) url("http://static.kunlun.com/web/xb/image/header07.jpg") no-repeat scroll center bottom;
+    background: url("../../static/img/header05_bot.png") no-repeat scroll center bottom;
     clear: both;
     height: auto;
     min-height: 800px;

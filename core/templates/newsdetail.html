@@ -7,62 +7,132 @@
     择天大陆-新闻公告
 {% endblock %}
 {% block content %}
+    <script type="text/javascript">
+        $(function () {
+            $("#ios-a").click(function () {
+                $("#ios").css("display", "none");
+                $("#erweima2").css("display", "none");
+                $("#android").css("display", "");
+                $("#erweima1").css("display", "");
+            });
+            $("#android-a").click(function () {
+                $("#ios").css("display", "");
+                $("#erweima2").css("display", "");
+                $("#android").css("display", "none");
+                $("#erweima1").css("display", "none")
+            });
+        });
+    </script>
     <div class="header05_news">
         <div class="new_top">
             <div class="new_bot">
                 <!-------sidebar------>
                 <div class="sidebar">
-                    <div class="side_left_add"><a title=""
-                                                  href="https://itunes.apple.com/cn/app/xian-bian/id662008120?&mt=8&uo=4"
-                                                  target="itunes_store"><img
-                            src="http://static.kunlun.com/web/xb/image/app_store.png" width="268" height="82"/></a>
-                    </div>
-                    <div class="side_left_add"><a title=""
-                                                  href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"><img
-                            src="http://static.kunlun.com/web/xb/image/android_download.png" width="268"
-                            height="82"/></a></div>
                     <div class="code w1">
-                        <div id="title01">
-                            <div class="codeTitle">
-                                <ul>
-                                    <li>IOS</li>
-                                    <li onclick="javascript:showTxt('title0','2','2');" class="click_and">ANDROID</li>
-                                </ul>
-                            </div>
-                            <div class="codeCont"><img src="http://static.kunlun.com/web/xb/image/code_ios.jpg"
-                                                       width="113" height="113"/></div>
+
+                        <div class="" style="float:left;" id="erweima1">
+                            <img src="/static/img/erweima.png">
                         </div>
-                        <div id="title02" style="display:none;">
-                            <div class="codeTitle">
-                                <ul>
-                                    <li onclick="javascript:showTxt('title0','1','2');" class="click_ios">IOS</li>
-                                    <li>ANDROID</li>
-                                </ul>
-                            </div>
-                            <div class="codeCont"><img src="http://static.kunlun.com/web/xb/image/code_and.jpg"
-                                                       width="113" height="113"/></div>
+                        <div class="" style="float:left;margin-left: 0px;" id="android">
+                            <a href="javascript:void(0);" id="android-a">
+                                <img src="/static/img/btn-ios.png">
+                            </a>
                         </div>
+
+                        <div class="" style="float:left;display:none;" id="erweima2">
+                            <img src="/static/img/erweima.png">
+                        </div>
+                        <div class="" style="float:left;margin-left: 0px;display:none;" id="ios">
+                            <a href="javascript:void(0);" id="ios-a">
+                                <img src="/static/img/btn-android.png">
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="side_left_add"><a href="http://weibo.com/kunlunxb" target="_blank"><img
-                            src="http://static.kunlun.com/web/xb/image/weibo_sina.png" width="268" height="89"/></a>
+                    <div class="side_left_add"><a target="itunes_store"
+                                                  href="#"
+                                                  title=""><img width="268" height="82"
+                                                                src="/static/img/androiddownloads.png"></a>
                     </div>
-                    <div class="offcial_wx"><a href="#"><img src="http://static.kunlun.com/web/xb/image/weixin.jpg"
-                                                             width="266" height="133"/></a></div>
-                    <!--------客服信息------>
-                    <div class="sidebar_leftBg">
+                    <div class="side_left_add"><a
+                            href="http://static.kunlun.com/xb/code/4/125/6/res/xianbian_kunlun_4_125_6_b_131_webp.apk"
+                            title=""><img width="268" height="82"
+                                          src="/static/img/iosdownloads.png"></a></div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
                         <div class="sidebar_leftTop">
                             <div class="sidebar_leftBot">
-                                <div class="sidebar_Title"></div>
-                                <div class="sidebar_Box sidebar_BoxInfo">
-                                    <p>官方玩家Q群:85152931<br/>
-                                        客服热线:010-85070333<br/>
-                                        投诉邮箱:tousu@kunlun.com</p>
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/serverList.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxServer">
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                    <p>
+                                        <span>2014-01-24</span>
+                                        S38 忠肝义胆
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/hotline.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxInfo" style="color: #fcd6ff;font-size: 10px;font-family: Microsoft YaHei;">
+                                    <p>
+                                        官方玩家Q群：438817071
+                                        <br>
+                                        客服邮箱：ztdlkf@9key.net
+                                        <br>
+                                        微信订阅号：（这个申请下来之后再添加上）
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="clear"></div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/cooperator.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxLinks">
+                                    <ul>
 
+                                    </ul>
+                                    <br class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-------sidebar over------>
                 <div class="content">
