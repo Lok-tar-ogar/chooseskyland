@@ -144,7 +144,7 @@
                 <!-------sidebar over------>
                 <div class="content">
                     <div class="news_more" style="height:60px;"></div>
-                    {% for new in news %}
+                    {% for new in newspaged %}
                         <div class="news_bg">
                             <div class="news_top">
                                 <div class="news_bot">
@@ -169,6 +169,18 @@
 
                 </div>
                 <br class="clear">
+
+<div class="page">
+   {% if newspaged.has_previous %}
+      <a href="?page={{ newspaged.previous_page_number }}">上一页</a>
+        {% endif %}
+
+第 {{ newspaged.number }} 页, 共 {{ newspaged.paginator.num_pages }} 页
+
+{% if newspaged.has_next %}
+           <a href="?page={{ newspaged.next_page_number }}">下一页</a>
+        {% endif %}
+</div>
             </div>
         </div>
     </div>
