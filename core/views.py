@@ -101,7 +101,7 @@ def activity(req):
     except:
         page = 1
         return HttpResponse(page)
-    return render(req, 'news.html', locals())
+    return render(req, 'act.html', locals())
 
 
 def newsdetail(req, id=0):
@@ -139,4 +139,4 @@ def activitydetail(req, id=0):
         apklink = NewsImg.objects.all()[0].apk.name[4:]
     except:
         apklink = ""
-    return render(req, 'newsdetail.html', locals())
+    return render(req, 'actdetail.html', locals())

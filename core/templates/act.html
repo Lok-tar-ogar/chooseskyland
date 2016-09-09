@@ -1,0 +1,187 @@
+{% extends 'master.html' %}
+
+{% load poll_extras %}
+{% load staticfiles %}
+
+{% block title %}
+    择天大陆-精彩活动
+{% endblock %}
+{% block content %}
+    <script type="text/javascript">
+        $(function () {
+            $("#ios-a").click(function () {
+                $("#ios").css("display", "none");
+                $("#erweima2").css("display", "none");
+                $("#android").css("display", "");
+                $("#erweima1").css("display", "");
+            });
+            $("#android-a").click(function () {
+                $("#ios").css("display", "");
+                $("#erweima2").css("display", "");
+                $("#android").css("display", "none");
+                $("#erweima1").css("display", "none")
+            });
+        });
+    </script>
+    <div class="header05_activities">
+        <div class="new_top">
+            <div class="new_bot">
+                <!-------sidebar------>
+                <div class="sidebar">
+                    <div class="code w1">
+
+                        {% if android %}
+                            <div class="" style="float:left;" id="erweima1">
+                                <img src="{% static android.Image %}" style="width: 190px;height: 190px;">
+                            </div>
+                        {% else %}
+                            <div class="" style="float:left;" id="erweima1">
+                                <img src="/static/img/erweima.png">
+                            </div>
+                        {% endif %}
+                        <div class="" style="float:left;margin-left: 0px;" id="android">
+                            <a href="javascript:void(0);" id="android-a">
+                                <img src="/static/img/btn-ios.png">
+                            </a>
+                        </div>
+
+                        {% if ios %}
+                            <div class="" style="float:left;display:none;" id="erweima2">
+                                <img src="{% static ios.Image %}" style="width: 190px;height: 190px;">
+                            </div>
+                        {% else %}
+                            <div class="" style="float:left;display:none;" id="erweima2">
+                                <img src="/static/img/erweima.png">
+                            </div>
+                        {% endif %}
+                        <div class="" style="float:left;margin-left: 0px;display:none;" id="ios">
+                            <a href="javascript:void(0);" id="ios-a">
+                                <img src="/static/img/btn-android.png">
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="side_left_add">
+                        {% if android %}
+                            <a target="" href="{{ android.apk }}" title=""><img width="268" height="82"
+                                                                                src="/static/img/androiddownloads.png"></a>
+                        {% else %}
+                            <a target="" href="#" title=""><img width="268" height="82"
+                                                                src="/static/img/androiddownloads.png"></a>
+                        {% endif %}
+                    </div>
+                    <div class="side_left_add">
+                        {% if ios %}
+                            <a href="{{ ios.Linkto }}" target="itunes_store"
+                               title=""><img width="268" height="82"
+                                             src="/static/img/iosdownloads.png"></a>
+                        {% else %}
+                            <a href="#"
+                               title=""><img width="268" height="82"
+                                             src="/static/img/iosdownloads.png"></a>
+
+                        {% endif %}
+                    </div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/serverList.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxServer">
+                                    {% for i in serverList %}
+                                        <p>
+                                            <span>{{ i.dimDate | date:"Y-m-d" }}</span>
+                                            {{ i.name }}
+                                        </p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/hotline.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxInfo"
+                                     style="color: #fcd6ff;font-size: 10px;font-family: Microsoft YaHei;">
+                                    <p>
+                                        官方玩家Q群：438817071
+                                        <br>
+                                        客服邮箱：ztdlkf@9key.net
+                                        <br>
+                                        微信订阅号：（这个申请下来之后再添加上）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="sidebar_leftBg" style="margin-bottom: 11px;">
+                        <div class="sidebar_leftTop">
+                            <div class="sidebar_leftBot">
+                                <div class="sidebar_Title">
+                                    <img width="103" height="20" style="margin-top: 7px;"
+                                         src="/static/img/cooperator.png">
+                                </div>
+                                <img src="/static/img/bar_side_top.png">
+                                <div class="sidebar_Box sidebar_BoxLinks">
+                                    <ul>
+
+                                    </ul>
+                                    <br class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------sidebar over------>
+                <div class="content">
+                    <div class="news_more" style="height:60px;"></div>
+                    {% for new in newspaged %}
+                        <div class="news_bg">
+                            <div class="news_top">
+                                <div class="news_bot">
+                                    <div class="news_img fltlft"><a style="" title="{{ new.newsTitle }}"
+                                                                    href="/{{ type }}/{{ new.id }}.aspx"><img
+                                            width="224" height="138" src="{{ new | imgurl }}"></a></div>
+                                    <div class="news_cont fltrt">
+                                        <h1><span>{{ new.dimDate }}</span><a style="" title="{{ new.newsTitle }}"
+                                                                             href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsTitle }}</a>
+                                        </h1>
+                                        <p><a href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsDetail | Brflen:100 }}</a>
+                                        </p>
+                                        <p class="more"><a title="更多" href="news/{{ new.id }}.aspx"><img width="43"
+                                                                                                         height="14"
+                                                                                                         src="/static/img/btn-+more.png"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <br class="clear">
+
+                <div class="page">
+                    {% if newspaged.has_previous %}
+                        <a href="?page={{ newspaged.previous_page_number }}">上一页</a>
+                    {% endif %}
+
+                    第 {{ newspaged.number }} 页, 共 {{ newspaged.paginator.num_pages }} 页
+
+                    {% if newspaged.has_next %}
+                        <a href="?page={{ newspaged.next_page_number }}">下一页</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

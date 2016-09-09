@@ -27,7 +27,7 @@ a:hover{ text-decoration:underline;}
 .header03{ background:url(../../static/img/header3.png) no-repeat 0px 0px; height:155px;}
 .header04{ background:url(../../static/img/bar02_03.png) no-repeat 0px 0px; height:369px;}
 
-.sidebar{ float:right; width:268px; margin-right:16px;_margin-right:8px;*margin-right:8px; padding-top:10px;}
+.sidebar{ float:right; width:268px; margin-right:10px;_margin-right:8px;*margin-right:8px; padding-top:10px;}
 .content{ float:left; width:705px; margin-left:16px;_margin-left:8px;*margin-left:8px; padding-top:12px;}
 
 .focus{ width:700px; height:370px; }
@@ -98,6 +98,23 @@ a:hover{ text-decoration:underline;}
     min-height: 800px;
     padding-bottom: 42px;
 }
+
+
+.header05_activities {
+    background: url("../../static/img/bar02_07.png") repeat-y scroll 0 0;
+    height:auto;
+}
+.header05_activities .new_top {
+    background: url("../../static/img/news01_03.png") no-repeat scroll center top;
+}
+.header05_activities .new_bot {
+    background: url("../../static/img/header05_bot.png") no-repeat scroll center bottom;
+    clear: both;
+    height: auto;
+    min-height: 800px;
+    padding-bottom: 42px;
+}
+
 .page {
     height: 24px;
     line-height: 24px;
