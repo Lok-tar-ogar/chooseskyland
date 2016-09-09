@@ -105,7 +105,7 @@ a:hover{ text-decoration:underline;}
     height:auto;
 }
 .header05_activities .new_top {
-    background: url("../../static/img/news01_03.png") no-repeat scroll center top;
+    background: url("../../static/img/act.png") no-repeat scroll center top;
 }
 .header05_activities .new_bot {
     background: url("../../static/img/header05_bot.png") no-repeat scroll center bottom;
