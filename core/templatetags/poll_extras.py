@@ -53,4 +53,7 @@ def ispwd(value):
 
 @register.filter(name="cimg")
 def cimg(value):
-    return value.Image.name[4:]
+    if value.Image.name != '':
+        return value.Image.name[4:]
+    else:
+        return ""
