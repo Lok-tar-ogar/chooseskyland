@@ -53,4 +53,4 @@ def ispwd(value):
 
 @register.filter(name="cimg")
 def cimg(value):
-    return value[4:]
+    return value.Image.name[4:]

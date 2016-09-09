@@ -93,7 +93,7 @@
                 <div class="example" style="margin-top: -1px;margin-left: 3px;">
                     <ul>
                         {% for i in c %}
-                            <li><a href="{{ i.Linkto | cimg }}"><img src="{{ i.Image }}" style="width: 704px;height:354px;" alt="{{ forloop.counter }}"/></a>
+                            <li><a href="{{ i | cimg }}"><img src="{{ i.Image }}" style="width: 704px;height:354px;" alt="{{ forloop.counter }}"/></a>
                             </li>
                         {% endfor %}
 {#                        <li><a href="#"><img src="/static/img/1.jpg" style="width: 704px;height:354px;" alt="1"/></a>#}
