@@ -1,5 +1,6 @@
 # encoding:utf-8
 from django.db import models
+from datetime import datetime
 
 
 class apk_type(models.Model):
@@ -21,7 +22,7 @@ class NewsImg(models.Model):
     apktype = models.ForeignKey(apk_type)
 
     def __str__(self):
-        return str(self.dimDate)
+        return self.apktype.name + "    " + self.dimDate.strftime('%Y-%m-%d')
 
     class Meta:
         verbose_name = 'apk下载地址'
