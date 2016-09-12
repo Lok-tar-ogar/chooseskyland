@@ -142,6 +142,10 @@ a:hover{ text-decoration:underline;}
     padding: 20px 0 0;
     width: 655px;
 }
+.article img{
+    max-width: 655px;
+    height:auto;
+}
 .article h2 {
     color: #ff9000;
     font-size: 14px;
