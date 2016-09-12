@@ -15,8 +15,7 @@ class apk_type(models.Model):
 
 
 class NewsImg(models.Model):
-    apk = models.FileField('最新apk', upload_to='core/static/img/')
-    Linkto = models.CharField('ios链接地址（可为空）', max_length=50, blank=True)
+    Linkto = models.CharField('链接地址', max_length=100, blank=True)
     Image = models.FileField('二维码图片（190*190）', upload_to='core/static/img/')
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
     apktype = models.ForeignKey(apk_type)
