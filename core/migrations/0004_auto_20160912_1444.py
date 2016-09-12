@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RemoveField(
             model_name='newsimg',
-            name='apk',
+            name='apktype',
         ),
         migrations.AlterField(
             model_name='newsimg',
