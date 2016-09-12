@@ -21,7 +21,7 @@ class NewsImg(models.Model):
     apktype = models.ForeignKey(apk_type)
 
     def __str__(self):
-        return str(self.dimDate)
+        return str(self.apktype.name.split('/')[-1])+'--'+str(self.dimDate)
 
     class Meta:
         verbose_name = 'apk下载地址'
