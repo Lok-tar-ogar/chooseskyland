@@ -33,7 +33,7 @@
 
                         {% if android %}
                             <div class="" style="float:left;" id="erweima1">
-                                <img src="{% static android.Image %}" style="width: 190px;height: 190px;">
+                                <img src="{{ android.Image | cimg }}" style="width: 190px;height: 190px;">
                             </div>
                         {% else %}
                             <div class="" style="float:left;" id="erweima1">
