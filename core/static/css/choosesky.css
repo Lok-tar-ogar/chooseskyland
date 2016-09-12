@@ -4,7 +4,7 @@ body,html,div,p,h1,h2,h3,h4,h5,h6,img,input,span,img,ul,li,dd,dt,dl,object,ifram
 body{ background: url(../../static/img/headerbg.png) no-repeat center top #ebecf1; color:#abc4ce; line-height:22px; font-family:"microsoft yahei",Arial; font-size:12px; min-width:1200px;}
 h1{ font-size:14px; font-weight:bold; color:#ff9000; line-height:28px;}
 h1 span{ font-size:10px; font-weight:normal; color:#fcd6ff; float:right; padding-left:6px;font-family:"微软雅黑"}
-h1 a{color:#2bffaf; font-size:14px;font-family:"黑体";}
+h1 a{color:#2bffaf; font-size:14px;font-family:"黑体";font-weight: bold;}
 ul,li{ list-style:none;}
 
 img{ border:0;}
