@@ -46,7 +46,7 @@ class serverno(models.Model):
 class Carousel(models.Model):
     """docstring for Carousel"""
     Title = models.CharField('标题', max_length=50)
-    Image = models.FileField('图片（1920*600）', upload_to='core/static/img/')
+    Image = models.FileField('图片（详询UI）', upload_to='core/static/img/')
     Linkto = models.CharField('链接地址（可为空）', max_length=50, blank=True)
     Caption = models.CharField('子标题', max_length=500, blank=True, null=True)
     dimDate = models.DateTimeField(auto_now_add=True)  # timezone.now()
