@@ -8,7 +8,10 @@ import re
 def Brflen(value, arg):
     pattern = re.compile('<.+?>')
     value=pattern.sub('', value)
-    value = value.replace('&middot;', '·')
+    p=re.compile('&.+?;')
+    l=p.findall(value)
+    for x in l:
+        value = value.replace(x, ' ')
     return value[:arg] + '...' if len(value) > arg else value[:arg]
 @register.filter(name="imgurl")
 def Brflen(value):
