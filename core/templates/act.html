@@ -32,7 +32,7 @@
 
                         {% if android %}
                             <div class="" style="float:left;" id="erweima1">
-                                <img src="{{ android.Image | cimg }}" style="width: 190px;height: 190px;">
+                                <img src="{{ android | cimg }}" style="width: 190px;height: 190px;">
                             </div>
                         {% else %}
                             <div class="" style="float:left;" id="erweima1">
@@ -47,7 +47,7 @@
 
                         {% if ios %}
                             <div class="" style="float:left;display:none;" id="erweima2">
-                                <img src="{% static ios.Image %}" style="width: 190px;height: 190px;">
+                                <img src="{{ ios | cimg }}" style="width: 190px;height: 190px;">
                             </div>
                         {% else %}
                             <div class="" style="float:left;display:none;" id="erweima2">
