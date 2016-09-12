@@ -82,22 +82,6 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='NewsImg',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('apk', models.FileField(upload_to='core/static/img/', verbose_name='最新apk')),
-                ('Linkto', models.CharField(blank=True, max_length=50, verbose_name='ios链接地址（可为空）')),
-                ('Image', models.FileField(upload_to='core/static/img/', verbose_name='二维码图片（190*190）')),
-                ('dimDate', models.DateTimeField(auto_now_add=True)),
-                ('apktype', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.apk_type')),
-            ],
-            options={
-                'verbose_name': 'apk下载地址',
-                'verbose_name_plural': 'apk下载地址',
-                'ordering': ['-dimDate'],
-            },
-        ),
-        migrations.CreateModel(
             name='serverno',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
