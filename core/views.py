@@ -53,7 +53,7 @@ def news(req):
         android = None
     argGet=req.GET
     try:
-        paginator = Paginator(news, 2)  # Show 5 contacts per page
+        paginator = Paginator(news, 8)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
             newspaged = paginator.page(page)
@@ -87,7 +87,7 @@ def activity(req):
         android = None
     argGet = req.GET
     try:
-        paginator = Paginator(news, 2)  # Show 5 contacts per page
+        paginator = Paginator(news, 8)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
             newspaged = paginator.page(page)
