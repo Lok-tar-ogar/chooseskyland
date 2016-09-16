@@ -188,9 +188,19 @@
                                              src="/static/img/cooperator.png">
                                     </div>
                                     <img src="/static/img/bar_side_top.png">
-                                    <div class="sidebar_Box sidebar_BoxLinks">
+                                    <div class="companyBox companyBoxLinks">
                                         <ul>
-
+                                            {% for i in company %}
+                                            <li>
+                                                {% if i.link %}
+                                                    <a href="http://www.ptbus.com">
+                                                {% else %}
+                                                    <a href="#">
+                                                {% endif %}
+                                                    <img style="width:110px; height: auto;" src="{{ i.Image | cimg }}">
+                                                </a>
+                                            </li>
+                                            {% endfor %}
                                         </ul>
                                         <br class="clear">
                                     </div>

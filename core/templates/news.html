@@ -64,7 +64,7 @@
                     <div class="side_left_add">
                         {% if android %}
                             <a target="" href="{{ android.Linkto }}" title=""><img width="268" height="82"
-                                                                                src="/static/img/androiddownloads.png"></a>
+                                                                                   src="/static/img/androiddownloads.png"></a>
                         {% else %}
                             <a target="" href="#" title=""><img width="268" height="82"
                                                                 src="/static/img/androiddownloads.png"></a>
@@ -131,9 +131,19 @@
                                          src="/static/img/cooperator.png">
                                 </div>
                                 <img src="/static/img/bar_side_top.png">
-                                <div class="sidebar_Box sidebar_BoxLinks">
+                                <div class="companyBox companyBoxLinks">
                                     <ul>
-
+                                        {% for i in company %}
+                                            <li>
+                                                {% if i.link %}
+                                                    <a href="http://www.ptbus.com">
+                                                {% else %}
+                                                    <a href="#">
+                                                {% endif %}
+                                                <img style="width:110px; height: auto;" src="{{ i.Image | cimg }}">
+                                                </a>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                     <br class="clear">
                                 </div>
@@ -170,17 +180,17 @@
                 </div>
                 <br class="clear">
 
-<div class="page">
-   {% if newspaged.has_previous %}
-      <a href="?page={{ newspaged.previous_page_number }}">上一页</a>
-        {% endif %}
+                <div class="page">
+                    {% if newspaged.has_previous %}
+                        <a href="?page={{ newspaged.previous_page_number }}">上一页</a>
+                    {% endif %}
 
-第 {{ newspaged.number }} 页, 共 {{ newspaged.paginator.num_pages }} 页
+                    第 {{ newspaged.number }} 页, 共 {{ newspaged.paginator.num_pages }} 页
 
-{% if newspaged.has_next %}
-           <a href="?page={{ newspaged.next_page_number }}">下一页</a>
-        {% endif %}
-</div>
+                    {% if newspaged.has_next %}
+                        <a href="?page={{ newspaged.next_page_number }}">下一页</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

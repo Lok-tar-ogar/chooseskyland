@@ -64,7 +64,7 @@
                     <div class="side_left_add">
                         {% if android %}
                             <a target="" href="{{ android.Linkto }}" title=""><img width="268" height="82"
-                                                                                src="/static/img/androiddownloads.png"></a>
+                                                                                   src="/static/img/androiddownloads.png"></a>
                         {% else %}
                             <a target="" href="#" title=""><img width="268" height="82"
                                                                 src="/static/img/androiddownloads.png"></a>
@@ -131,9 +131,19 @@
                                          src="/static/img/cooperator.png">
                                 </div>
                                 <img src="/static/img/bar_side_top.png">
-                                <div class="sidebar_Box sidebar_BoxLinks">
+                                <div class="companyBox companyBoxLinks">
                                     <ul>
-
+                                        {% for i in company %}
+                                            <li>
+                                                {% if i.link %}
+                                                    <a href="http://www.ptbus.com">
+                                                {% else %}
+                                                    <a href="#">
+                                                {% endif %}
+                                                <img style="width:110px; height: auto;" src="{{ i.Image | cimg }}">
+                                                </a>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                     <br class="clear">
                                 </div>
@@ -158,8 +168,8 @@
                                         <p><a href="/{{ type }}/{{ new.id }}.aspx">{{ new.newsDetail | Brflen:100 }}</a>
                                         </p>
                                         <p class="more"><a title="更多" href="act/{{ new.id }}.aspx"><img width="43"
-                                                                                                         height="14"
-                                                                                                         src="/static/img/btn-+more.png"></a>
+                                                                                                        height="14"
+                                                                                                        src="/static/img/btn-+more.png"></a>
                                         </p>
                                     </div>
                                 </div>

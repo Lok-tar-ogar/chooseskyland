@@ -15,6 +15,8 @@ def index(request):
     news = News.objects.all()
     news = news[0:4]
 
+    company = Company.objects.all()
+
     serverList = serverno.objects.all()
     serverList = serverList[0:6]
     try:
@@ -27,13 +29,14 @@ def index(request):
         android = None
 
     c = Carousel.objects.all()
-    c = c[0:4]
+    c = c[0:10]
 
     return render(request, 'index.html', locals())
 
 
 def news(req):
     news = News.objects.all()
+    company = Company.objects.all()
     type='news'
     # try:
     #     apklink=NewsImg.objects.all()[0].apk.name[4:]
@@ -72,6 +75,7 @@ def news(req):
 
 def activity(req):
     news = Activities.objects.all()
+    company = Company.objects.all()
     type = 'act'
     try:
         apklink = NewsImg.objects.all()[0].apk.name[4:]
@@ -107,6 +111,7 @@ def activity(req):
 def newsdetail(req, id=0):
     serverList = serverno.objects.all()
     serverList = serverList[0:6]
+    company = Company.objects.all()
 
     try:
         ios = NewsImg.objects.filter(apktype__name='ios')[0]
@@ -130,6 +135,7 @@ def newsdetail(req, id=0):
 
 
 def activitydetail(req, id=0):
+    company = Company.objects.all()
     news = Activities.objects.filter(id=id)
     try:
         n = news[0]

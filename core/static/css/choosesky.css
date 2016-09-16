@@ -70,6 +70,14 @@ a:hover{ text-decoration:underline;}
 .sidebar_BoxLinks ul{ width:224px;}
 .sidebar_BoxLinks li{width:87px; height:37px; float:left; margin-top:8px;margin-left:18px;_margin-left:9px;*margin-left:9px;_margin-top:4px;*margin-top:4px;}
 
+.companyBox{ padding-top:15px; padding-left:5px; width:240px;}
+.companyBoxLinks span{ width:87px; height:37px; float:left; padding-left:6px;}
+.companyBoxLinks .w3{ margin-right:28px; margin-bottom:11px;_margin-bottom:13px;*margin-bottom:13px;}
+.companyBoxLinks .w4{ margin-right:28px; margin-bottom:0px;}
+
+.companyBoxLinks ul{ width:240px;}
+.companyBoxLinks li{width:110px; height:auto; float:left; margin-top:auto;margin-left:10px;_margin-left:9px;*margin-left:9px;_margin-top:4px;*margin-top:4px;}
+
 
 .plant_footer{ background:#F8F8F8;clear:both;}
 .plant_fot_wrap{ border-top:2px solid #61696E; min-width:1000px;}
@@ -166,7 +174,7 @@ a:hover{ text-decoration:underline;}
   width:704px;
   height:354px;
 }
-.example ol{position:relative;width: 200px;height: 20px;top:-40px;left:500px;}
+.example ol{position:relative;width: 200px;height: 20px;top:-40px;left:400px;}
 .example ol li{float:left;width: 27px;height: 27px;margin: 1px;background:url(../../static/img/btn02.png) no-repeat ;}
 .example ol li.seleted{background:url(../../static/img/btn01.png) no-repeat;}
 
