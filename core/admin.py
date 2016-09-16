@@ -18,7 +18,7 @@ admin.site.register(Activities, TextFiledAdmin)
 admin.site.register(NewsImg, TextFiledAdmin)
 admin.site.register(serverno, TextFiledAdmin)
 admin.site.register(Carousel, TextFiledAdmin)
-
+admin.site.register(Company, TextFiledAdmin)
 # admin.site.register(FILM)
 # admin.site.register(TVSERIES)
 # admin.site.register(TAG_FILM)
