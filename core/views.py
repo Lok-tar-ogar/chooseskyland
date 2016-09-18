@@ -76,6 +76,8 @@ def news(req):
 def activity(req):
     news = Activities.objects.all()
     company = Company.objects.all()
+    serverList = serverno.objects.all()
+    serverList = serverList[0:6]
     type = 'act'
     try:
         apklink = NewsImg.objects.all()[0].apk.name[4:]
@@ -137,6 +139,8 @@ def newsdetail(req, id=0):
 def activitydetail(req, id=0):
     company = Company.objects.all()
     news = Activities.objects.filter(id=id)
+    serverList = serverno.objects.all()
+    serverList = serverList[0:6]
     try:
         n = news[0]
     except:
