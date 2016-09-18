@@ -193,11 +193,11 @@
                                             {% for i in company %}
                                             <li>
                                                 {% if i.link %}
-                                                    <a href="http://www.ptbus.com">
+                                                    <a href="{{ i.link }}" target="_blank">
                                                 {% else %}
                                                     <a href="#">
                                                 {% endif %}
-                                                    <img style="width:110px; height: auto;" src="{{ i.Image | cimg }}">
+                                                    <img style="width:110px; height: auto;" src="{{ i | cimg }}">
                                                 </a>
                                             </li>
                                             {% endfor %}

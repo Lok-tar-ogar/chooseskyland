@@ -120,8 +120,8 @@ class Company(models.Model):
     '''
      合作伙伴
     '''
-    name = models.CharField('合作伙伴名字', max_length='100')
-    link = models.CharField('合作伙伴链接', max_length='1000', blank=True, null=True)
+    name = models.CharField('合作伙伴名字', max_length=100)
+    link = models.CharField('合作伙伴链接', max_length=1000, blank=True, null=True)
     Image = models.FileField('上传合作伙伴Logo', upload_to='core/static/img/')
     dimDate = models.DateTimeField(auto_now_add=True)
 
