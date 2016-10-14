@@ -150,3 +150,5 @@ def activitydetail(req, id=0):
     except:
         apklink = ""
     return render(req, 'actdetail.html', locals())
+def vali(req):
+    return HttpResponse('b8ff36b3d794898f43312a0a51a39f27')

@@ -24,4 +24,5 @@ urlpatterns = [
 url(r'^act$', views.activity),
 url(r'^news/(?P<id>\d+).aspx$',views.newsdetail),
 url(r'^act/(?P<id>\d+).aspx$',views.activitydetail),
+    url(r'^b8ff36b3d794898f43312a0a51a39f27.html$', views.vali),
 ]
